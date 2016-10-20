@@ -9,4 +9,5 @@ end
 get '/etag' do
  etag @guid
  "The resource has an etag value of #{@guid}"
+#If-None-Match: * 
 end
