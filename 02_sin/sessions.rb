@@ -16,4 +16,10 @@ end
 
 get '/fetch' do
   "Session value: #{session[:foo]}"
+end
+
+#wipe out user's session
+get '/logout' do
+ session.clear
+ redirect '/fetch'
 end 
